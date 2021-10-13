@@ -1,0 +1,13 @@
+kilalanin pangkat = "BSCS 3A";
+kilalanin grupo = "Group ";
+
+kada (kilalanin numero = 1; numero <= 12; numero++)
+    ipakita grupo + numero;
+
+
+ipakita "Sir Nueva";
+
+
+kung (123 != 123)
+    ipakita "Hello World";
+
