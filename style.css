@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* font-family: Times New Roman; */
+    /* font-family: 'Courier New'; */
+    /* font-family: Segoe UI; */
+    /* font-family: Georgia; */
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: #ccc;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #444; 
+    border-radius: 5px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.logo-container .title h2 {
+    margin-top: 2rem;
+    text-align: center;
+    color: #444;
+    font-size: 4rem;
+    letter-spacing: 5px;
+}
+
+.logo-container .title .line {
+    width: 300px;
+    height: 10px;
+    background-color: #444;
+}
+
+.logo-container .title p {
+    margin-top: 1rem;
+    text-align: center;
+    color: #444;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container {
+    width: 1320px;
+    margin: 5rem auto;
+    border: 2px solid #444;
+}
+
+.menu-container {
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: baseline;
+    padding: .5rem;
+    border-bottom: 2px solid #444;
+}
+
+.options {
+    width: max-content;
+    background: none;
+    text-decoration: none;
+    border: none;
+    padding: .25rem;
+    color: #777;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.dropdown.active > .options,
+.options:hover {
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    padding: .5rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active > .options + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.adjust-mode {
+    flex-grow: 1;
+    text-align: end;
+    color: #777;
+}
+
+.adjust-mode .fa-moon:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#light {
+    display: none;
+}
+
+/* Text Editor Design */
+.text-editor-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container,
+.right-container {
+    width: 50%;
+}
+
+.left-container textarea,
+.right-container textarea {
+    resize: none;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #ccc;
+    padding: 1rem;
+}
+
+.left-container textarea {
+    border-right: 2px solid #444;
+}
+
+.right-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-container .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.right-container .content p {
+    color: #444;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: .5rem;
+}
+
+.right-container .content textarea {
+    width: 85%;
+    line-height: 1.5rem;
+    border: 2px solid #444;
+    border-radius: 10px;
+}
+
+.right-container .content img {
+    width: calc(85% + 2rem);
+    height: 400px;
+    border: 2px solid #444;
+    border-radius: 10px;
+}
