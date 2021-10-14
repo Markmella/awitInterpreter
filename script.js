@@ -145,7 +145,7 @@ function executeCode(){
 
     $.ajax({
 
-        url: "awit.netlify.app/compiler.php",
+        url: "/compiler.php",
 
         method: "POST",
 
